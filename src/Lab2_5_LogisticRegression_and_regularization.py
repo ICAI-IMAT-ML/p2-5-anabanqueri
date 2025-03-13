@@ -103,6 +103,9 @@ class LogisticRegressor:
                 dw = self.elasticnet_regularization(dw, m, C, l1_ratio)
 
             # Update parameters
+            print(f"weights shape: {self.weights.shape}")
+            print(f"dw shape: {dw.shape}")
+
             self.weights -= learning_rate * dw
             self.bias -= learning_rate * db
 
